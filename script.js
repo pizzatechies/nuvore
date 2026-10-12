@@ -25,7 +25,7 @@ const slug = n => n.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase
 
 // Product photos live in assets/products/<slug>.jpg (e.g. brisa-suave.jpg).
 // If a photo is missing, the drawn bottle is shown instead.
-const photo = (p, i) => `<img src="assets/products/${slug(p.name)}.jpg" alt="${p.name} perfume bottle" loading="lazy"
+const photo = (p, i) => `<img src="assets/products/${slug(p.name)}.png" alt="${p.name} perfume bottle" loading="lazy"
   onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',innerHTML:this.dataset.fb}))" data-fb='${bottle(i).replace(/'/g, "&#39;")}'>`;
 
 const bottle = i => {

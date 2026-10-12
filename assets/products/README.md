@@ -1,3 +1,5 @@
 # Product photos
 
-Drop one photo per perfume here, named after the product, e.g. `brisa-suave.jpg`, `luna-blanca.jpg`, `reina-de-oro.jpg`. Square or 4:5 JPGs around 800px wide work best. Missing photos fall back to a drawn bottle.
+One transparent PNG per perfume, named after the product (e.g. `luna-blanca.png`). Missing photos fall back to a drawn bottle.
+
+Current photos: luna-blanca, rosa-eterna, noche-serena, ambar-real, terciopelo-negro. Still drawn: brisa-suave, sol-dorado, jardin-secreto, bosque-encantado, amanecer, pasion-ardiente, reina-de-oro.
