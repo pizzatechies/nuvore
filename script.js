@@ -17,7 +17,8 @@ const products = [
 
 const fmt = n => "KSh " + n.toLocaleString("en-KE");
 const $ = id => document.getElementById(id);
-let cart = JSON.parse(localStorage.getItem("nuvore-cart") || "{}");
+let cart = {};
+try { cart = JSON.parse(localStorage.getItem("nuvore-cart") || "{}"); } catch (e) {}
 let filter = "All";
 
 const bottle = i => {
@@ -50,7 +51,7 @@ function renderGrid() {
       </div></article>`).join("");
 }
 
-function save() { localStorage.setItem("nuvore-cart", JSON.stringify(cart)); renderCart(); }
+function save() { try { localStorage.setItem("nuvore-cart", JSON.stringify(cart)); } catch (e) {} renderCart(); }
 
 function renderCart() {
   const ids = Object.keys(cart).filter(k => products[k]);
