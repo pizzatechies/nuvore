@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuvoré Perfume</title>
+<meta name="description" content="Nuvoré Perfume — fragrances for every moment, from KSh 650 to KSh 8,000.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="#inicio" class="brand"><img src="assets/logo.png" alt="Nuvoré Perfume"></a>
+  <nav>
+    <a href="#coleccion">Collection</a>
+    <a href="#historia">Our Story</a>
+    <a href="#contacto">Contact</a>
+  </nav>
+  <button class="cart-btn" id="cartOpen" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <p class="eyebrow">Perfume House</p>
+    <h1>Scent that<br><em>remembers you</em></h1>
+    <p class="lead">Fragrances for every mood and every budget — from KSh&nbsp;650 to KSh&nbsp;8,000.</p>
+    <a class="btn" href="#coleccion">Shop the collection</a>
+  </section>
+
+  <section class="strip">
+    <div><strong>KSh 650+</strong><span>Prices for every pocket</span></div>
+    <div><strong>12 Fragrances</strong><span>Floral, woody, fresh &amp; oriental</span></div>
+    <div><strong>Nationwide delivery</strong><span>Order via WhatsApp</span></div>
+  </section>
+
+  <section class="collection" id="coleccion">
+    <h2>The Collection</h2>
+    <p class="sub">Twelve fragrances, named in Spanish for the warmth and romance they carry.</p>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="story" id="historia">
+    <div>
+      <h2>Our Story</h2>
+      <p>Nuvoré was born from a simple belief: everyone deserves a signature scent. We blend olive-leaf freshness, warm woods and rich florals into perfumes that last from morning to midnight.</p>
+      <p>Whether you are choosing your first fragrance at KSh&nbsp;650 or a luxurious extrait at KSh&nbsp;8,000, every bottle gets the same care.</p>
+    </div>
+    <ul>
+      <li><b>Long-lasting</b> concentrated oils</li>
+      <li><b>Elegant</b> bottles, gift-ready</li>
+      <li><b>Fair</b> prices, no compromise</li>
+    </ul>
+  </section>
+</main>
+
+<footer id="contacto">
+  <img src="assets/logo.png" alt="Nuvoré Perfume" class="foot-logo">
+  <p>Orders &amp; enquiries: <a href="https://wa.me/254700000000" id="waLink">WhatsApp +254 700 000 000</a></p>
+  <p class="small">© <span id="yr"></span> Nuvoré Perfume. All prices in Kenya Shillings (KSh).</p>
+</footer>
+
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head"><h3>Your Cart</h3><button id="cartClose" aria-label="Close cart">×</button></div>
+  <ul id="cartItems"></ul>
+  <div class="drawer-foot">
+    <p class="total">Total <span id="cartTotal">KSh 0</span></p>
+    <a class="btn full" id="checkout" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
+  </div>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
