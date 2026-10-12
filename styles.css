@@ -31,7 +31,10 @@ h1,h2,h3,.name{font-family:"Cormorant Garamond",serif;font-weight:500}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.6rem;max-width:1200px;margin:auto}
 .card{border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;transition:.25s}
 .card:hover{box-shadow:0 12px 30px rgba(189,154,33,.18);transform:translateY(-3px)}
-.bottle{height:220px;display:grid;place-items:center;background:linear-gradient(160deg,var(--cream),#f3ead0)}
+.bottle{height:260px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(160deg,var(--cream),#f3ead0)}
+.bottle img{width:100%;height:260px;object-fit:contain;padding:14px;display:block;transition:transform .5s}
+.card:hover .bottle img{transform:scale(1.04)}
+.fallback{display:grid;place-items:center}
 .bottle svg{height:170px}
 .info{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .cat{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-d)}
@@ -51,6 +54,7 @@ footer{text-align:center;padding:3rem 5vw;border-top:1px solid var(--line)}
 footer p{margin-top:.6rem}
 footer a{color:var(--gold-d)}
 .small{font-size:.75rem;opacity:.7}
+.crafted{font-size:.78rem;letter-spacing:.12em;color:var(--gold-d);margin-top:.4rem}
 .drawer{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);background:#fff;z-index:40;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.12)}
 .drawer.open{transform:none}
 .drawer-head{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.4rem;border-bottom:1px solid var(--line)}

@@ -1,4 +1,4 @@
-const WHATSAPP = "254700000000"; // replace with the real Nuvoré WhatsApp number
+const WHATSAPP = "25496308927";
 
 const products = [
   { name: "Brisa Suave",       price: 650,  cat: "Fresh",    notes: "Citrus, sea breeze, white musk" },
@@ -21,6 +21,13 @@ let cart = {};
 try { cart = JSON.parse(localStorage.getItem("nuvore-cart") || "{}"); } catch (e) {}
 let filter = "All";
 
+const slug = n => n.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+// Product photos live in assets/products/<slug>.jpg (e.g. brisa-suave.jpg).
+// If a photo is missing, the drawn bottle is shown instead.
+const photo = (p, i) => `<img src="assets/products/${slug(p.name)}.png" alt="${p.name} perfume bottle" loading="lazy"
+  onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',innerHTML:this.dataset.fb}))" data-fb='${bottle(i).replace(/'/g, "&#39;")}'>`;
+
 const bottle = i => {
   const h = 38 + (i * 7) % 20; // varied tint per product
   return `<svg viewBox="0 0 100 160" aria-hidden="true">
@@ -41,7 +48,7 @@ function renderGrid() {
   $("grid").innerHTML = products.map((p, i) => ({ p, i }))
     .filter(({ p }) => filter === "All" || p.cat === filter)
     .map(({ p, i }) => `<article class="card">
-      <div class="bottle">${bottle(i)}</div>
+      <div class="bottle">${photo(p, i)}</div>
       <div class="info">
         <span class="cat">${p.cat}</span>
         <h3 class="name">${p.name}</h3>
